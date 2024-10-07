@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocos Decoder Examples</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .note {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vocos Decoder Examples</h1>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>original</th>
+                <th>encodec_24k</th>
+                <th>vocos</th>
+                <th>SpeechTokenizer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>甘味人生</td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/hokkien_drama_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/hokkien_drama_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/hokkien_drama_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/hokkien_drama_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/hokkien_drama_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/hokkien_drama_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/hokkien_drama_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/hokkien_drama_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/hokkien_drama_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/hokkien_drama_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/hokkien_drama_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/hokkien_drama_sample-02.wav"></audio><br/>
+                </td>
+            </tr>
+            <tr>
+                <td>新聞</td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/taiwan_news_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/taiwan_news_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/taiwan_news_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/taiwan_news_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/taiwan_news_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/taiwan_news_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/taiwan_news_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/taiwan_news_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/taiwan_news_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/taiwan_news_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/taiwan_news_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/taiwan_news_sample-02.wav"></audio><br/>
+                </td>
+            <tr>
+                <td>男youtuber（阿滴英文）</td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/rayduenglish_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/rayduenglish_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/rayduenglish_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/rayduenglish_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/rayduenglish_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/rayduenglish_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/rayduenglish_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/rayduenglish_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/rayduenglish_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/rayduenglish_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/rayduenglish_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/rayduenglish_sample-02.wav"></audio><br/>
+                </td>
+            </tr>
+            <tr>
+                <td>女youtuber（Hook）</td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/hook_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/hook_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/hook_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/hook_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/hook_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/hook_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/hook_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/hook_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/hook_sample-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/hook_sample-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/hook_sample-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/hook_sample-02.wav"></audio><br/>
+                </td>
+            </tr>
+            <tr>
+                <td>Librispeech</td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/librispeech-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/librispeech-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/orig_audio/librispeech-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/librispeech-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/librispeech-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/encodec_resyn_audio/librispeech-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/librispeech-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/librispeech-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/vocos_resyn_audio/librispeech-02.wav"></audio><br/>
+                </td>
+                <td>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/librispeech-00.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/librispeech-01.wav"></audio><br/>
+                    <audio class="audio-button" controls src="https://storage.cloud.google.com/anthony-wang/audio/sptknr_resyn_audio/librispeech-02.wav"></audio><br/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="note">All the sampling rate is set to 24k.</div>
+</body>
+</html>
